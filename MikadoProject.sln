@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikadoProject", "MikadoProject\MikadoProject.csproj", "{A8B95F5E-2FE1-4EA9-B9C0-BB043E1FE8EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MikadoProject", "MikadoProject\MikadoProject.csproj", "{A8B95F5E-2FE1-4EA9-B9C0-BB043E1FE8EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitMikadoProject", "XUnitMikadoProject\XUnitMikadoProject.csproj", "{644B9E3E-DBFB-4419-AC47-4AD87EE355EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A8B95F5E-2FE1-4EA9-B9C0-BB043E1FE8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8B95F5E-2FE1-4EA9-B9C0-BB043E1FE8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8B95F5E-2FE1-4EA9-B9C0-BB043E1FE8EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644B9E3E-DBFB-4419-AC47-4AD87EE355EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644B9E3E-DBFB-4419-AC47-4AD87EE355EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644B9E3E-DBFB-4419-AC47-4AD87EE355EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644B9E3E-DBFB-4419-AC47-4AD87EE355EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

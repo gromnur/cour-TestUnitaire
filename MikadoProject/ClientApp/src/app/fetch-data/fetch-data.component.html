@@ -1,4 +1,23 @@
-<h1 id="tableLabel">Utilisateurs</h1>
+<h1 id="tableLabel">Liste Utilisateurs</h1>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
-<p *ngIf="forecasts">Nom : {{forecasts.nom}}, Prenom : {{forecasts.prenom}}, Login {{forecasts.login}}, MDP : {{forecasts.password}}</p>
+<p *ngIf="!users"><em>Loading...</em></p>
+<div *ngIf="users">
+  <div *ngFor="let user of users">
+    <span>Nom : {{user.nom}} - </span>
+    <span>Prenom : {{user.prenom}} - </span>
+    <span>Login : {{user.login}} - </span>
+    <span>Password : {{user.password}}</span>
+  </div>
+</div>
+
+<h1 id="tableLabel">Liste Media</h1>
+
+<p *ngIf="!medias"><em>Loading...</em></p>
+<div *ngIf="medias">
+  <div *ngFor="let media of medias">
+    <span>Libelle : {{media.libelle}} - </span>
+    <span>Description : {{media.description}}</span>
+    <span *ngIf="media.auteur"> - Auteur : {{media.auteur}}</span>
+    <span *ngIf="media.realisateur"> - Realisateur : {{media.realisateur}}</span>
+  </div>
+</div>

@@ -9,9 +9,9 @@ namespace MikadoProject.DAO
     public interface IDAO<T>
     {
 
-        public abstract T create(object T);
+        public abstract void create(T obj);
 
-        public abstract T update(object T);
+        public abstract void update(T obj);
 
         public abstract void delete(int id);
 

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace MikadoProject.Models
 {
+    [Table("Medias")]
     public class Media
     {
         public Media(int mediaId, string libelle, string description, string auteur, string realisateur, string type)

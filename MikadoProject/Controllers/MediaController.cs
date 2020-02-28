@@ -6,7 +6,7 @@ using MikadoProject.Models;
 namespace MikadoProject.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class MediaController : ControllerBase
     {
         private readonly MikadoContexte _contexte;
@@ -34,10 +34,16 @@ namespace MikadoProject.Controllers
             new EntityFrameWorkMediaDAO(_contexte).delete(mediaId);
         }
 
-        [HttpPut]
-        public Media UpdateMedia(Media media)
+        [HttpPost]
+        public void CreateMedia(Media media)
         {
-            return new EntityFrameWorkMediaDAO(_contexte).update(media);
+            new EntityFrameWorkMediaDAO(_contexte).create(media);
+        }
+
+        [HttpPut]
+        public void UpdateMedia(Media media)
+        {
+            new EntityFrameWorkMediaDAO(_contexte).update(media);
         }
     }
 }

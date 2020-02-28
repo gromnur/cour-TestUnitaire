@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace MikadoProject.Models
 {
+    [Table("Users")]
     public class User
     {
         public User(string nom, string prenom, string login, string password, int role)

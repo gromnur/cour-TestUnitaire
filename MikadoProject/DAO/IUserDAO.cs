@@ -6,6 +6,6 @@ namespace MikadoProject.DAO
     public interface IUserDAO : IDAO<User>
     {
 
-        public List<Favori> GetUserFavoris(int idUser);
+        public List<Media> GetUserFavoris(int idUser);
     }
 }

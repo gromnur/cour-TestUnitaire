@@ -15,14 +15,15 @@ namespace MikadoProject.DAO
             _contexte = contexte;
         }
 
-        public User create(object T)
+        public void create(User obj)
         {
-            throw new NotImplementedException();
+            _contexte.User.Add(obj);
         }
 
         public void delete(int id)
         {
-            throw new NotImplementedException();
+            User findUser = _contexte.User.SingleOrDefault(u => u.UserId == id);
+            _contexte.User.Remove(findUser);
         }
 
         public List<User> findAll()
@@ -35,14 +36,14 @@ namespace MikadoProject.DAO
             return _contexte.User.Find(id);
         }
 
-        public List<Favori> GetUserFavoris(int idUser)
+        public void update(User obj)
         {
-            return null;
+            _contexte.User.Update(obj);
         }
 
-        public User update(object T)
+        public List<Media> GetUserFavoris(int idUser)
         {
-            throw new NotImplementedException();
+            return _contexte.Favoris.Where(f => f.UserId == idUser).Select(f => f.Media).ToList();
         }
     }
 }

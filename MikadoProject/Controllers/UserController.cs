@@ -6,7 +6,7 @@ using MikadoProject.Models;
 namespace MikadoProject.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly MikadoContexte _contexte;
@@ -34,14 +34,26 @@ namespace MikadoProject.Controllers
             new EntityFrameWorkUserDAO(_contexte).delete(userId);
         }
 
-        [HttpPut]
-        public User UpdateUser(User user)
+        [HttpPost]
+        public ActionResult CreateUser(User user)
         {
-            return new EntityFrameWorkUserDAO(_contexte).update(user);
+            if(user == null)
+            {
+                return BadRequest();
+            }
+            new EntityFrameWorkUserDAO(_contexte).create(user);
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public void UpdateUser(User user)
+        {
+            new EntityFrameWorkUserDAO(_contexte).update(user);
         }
 
         [HttpGet("{userId}/favoris")]
-        public List<Favori> GetUserFavoris(int userId)
+        public List<Media> GetUserFavoris(int userId)
         {
             return new EntityFrameWorkUserDAO(_contexte).GetUserFavoris(userId);
         }

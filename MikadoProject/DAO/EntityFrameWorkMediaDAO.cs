@@ -1,6 +1,7 @@
 ﻿using MikadoProject.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MikadoProject.DAO
 {
@@ -13,29 +14,30 @@ namespace MikadoProject.DAO
             _contexte = contexte;
         }
 
-        public Media create(object T)
+        public void create(Media obj)
         {
-            throw new NotImplementedException();
+            _contexte.Media.Add(obj);
         }
 
         public void delete(int id)
         {
-            throw new NotImplementedException();
+            Media findMedia = _contexte.Media.SingleOrDefault(m => m.MediaId == id);
+            _contexte.Media.Remove(findMedia);
         }
 
         public List<Media> findAll()
         {
-            throw new NotImplementedException();
+            return _contexte.Media.ToList();
         }
 
         public Media findById(int id)
         {
-            throw new NotImplementedException();
+            return _contexte.Media.Find(id);
         }
 
-        public Media update(object T)
+        public void update(Media obj)
         {
-            throw new NotImplementedException();
+            _contexte.Media.Update(obj);
         }
     }
 }

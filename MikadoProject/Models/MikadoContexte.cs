@@ -21,6 +21,7 @@ namespace MikadoProject.Models
         {
 
             modelBuilder.Entity<Favori>().HasKey(favori => new { favori.UserId, favori.MediaId });
+
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Media>().ToTable("Medias");
         }

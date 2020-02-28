@@ -8,7 +8,8 @@
     "build:ssr": "ng run MikadoProject:server:dev",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compo": "ng g c compo --module=app.module"
   },
   "private": true,
   "dependencies": {
